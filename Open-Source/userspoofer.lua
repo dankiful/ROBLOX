@@ -10,6 +10,6 @@ wait(1)
 spoof()
 
 
-Player.CharacterAdded:Connect(function()
+LP.CharacterAdded:Connect(function()
     spoof()
 end)
