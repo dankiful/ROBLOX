@@ -68,7 +68,7 @@ local booths = {
 local queueonteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 local httprequest = (syn and syn.request) or http and http.request or http_request or (fluxus and fluxus.request) or request
 local Players = game:GetService("Players")
-queueonteleport("loadstring(game:HttpGet('raw.githubusercontent.com/dankiful/ROBLOX/main/Open-Source/plsdonate.lua'))()")
+queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/dankiful/ROBLOX/main/Open-Source/plsdonate.lua'))()")
 local library = loadstring(game:HttpGet("https://pastebin.com/raw/QYnVhBVd"))()
 
 --Load Settings
