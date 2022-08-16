@@ -137,11 +137,11 @@ function update()
         text = tostring(math.ceil(tonumber(Raised.Value + 1) / 100) * 100)
         text = string.format("%.1fk", text / 10 ^ 3)
         --Booth text when 1000+ robux raised
-        boothText = tostring('<font color="'.. getgenv().settings.hexBox.. '">GOAL: ' .. text .. "</font>")
+        boothText = tostring('my goal ' .. Raised.value .. "/" .. text .. " afk")
     else
         --Booth text when under 1000 robux raised
         text = tostring(Raised.Value + getgenv().settings.goalBox)
-        boothText = tostring('<font color="'.. getgenv().settings.hexBox.. '">GOAL: ' .. Raised.value .. " / " .. text .. "</font>")
+        boothText = tostring('my goal ' .. Raised.value .. "/" .. text .. " afk")
     end
     --Updates the booth text
     require(game.ReplicatedStorage.Remotes).Event("SetBoothText"):FireServer(boothText, "booth")
