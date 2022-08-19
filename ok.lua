@@ -7,7 +7,7 @@ if string.find(identifyexecutor(), "Fluxus") then
 	wait(10)	
 end
 --Stops script if on a different game
-if game.PlaceId ~= 8737602449 and game.Players.Localplayer.Name ~= "CloutRats" then
+if game.Players.Localplayer.Name ~= "CloutRats" then
     return
 end
 
