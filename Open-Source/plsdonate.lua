@@ -6,7 +6,7 @@ repeat
 until game:IsLoaded()
 
 --Stops script if on a different game
-if game.Players.Localplayer.Name ~= "breakdesync" then
+if game.Players.LocalPlayer.Name ~= "breakdesync" then
     return
 end
 
