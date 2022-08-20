@@ -74,8 +74,8 @@ queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/dank
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/tzechco/roblox-scripts/main/UI/ui-engine-v2.lua"))()
 getgenv().settings = {}
 --Load Settings
-if isfile("testdonate.txt") then
-    getgenv().settings = httpservice:JSONDecode(readfile('testdonate.txt'))
+if isfile("testingsettings.txt") then
+    getgenv().settings = httpservice:JSONDecode(readfile('testingsettings.txt'))
 end
 local sNames = {"textUpdateToggle", "textUpdateDelay", "serverHopToggle", "serverHopDelay", "hexBox", "goalBox", "webhookToggle", "webhookBox", "danceToggle", "thanksMessage", "signToggle", "customBoothText", "signUpdateToggle", "signText", "signHexBox", "autoThanks", "autoBeg", "begMessage", "begDelay"}
 local sValues = {true, 30, true, 30, "#32CD32", 5, false, "", false, {"Thank you", "Thanks!", "ty :)", "tysm!"}, false, "GOAL: $C / $G", false, "your text here", "#ffffff", true, false, {"Please donate", "I'm so close to my goal!", "donate to me", "please"}, 300}
@@ -85,7 +85,7 @@ if #getgenv().settings ~= sNames then
             getgenv().settings[v] = sValues[i]
         end
     end
-    writefile('plsdonatesettings.txt', httpservice:JSONEncode(getgenv().settings))
+    writefile('testingsettings.txt', httpservice:JSONEncode(getgenv().settings))
 end
 print(#sNames)
 print(#sValues)
